@@ -20,3 +20,22 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
 });
+// const db = require("./models");
+
+// async function startServer() {
+//   try {
+//     await db.sequelize.authenticate();
+//     console.log("✅ Database connected");
+
+//     await db.sequelize.sync();
+//     console.log("✅ Database synced");
+
+//     app.listen(PORT, () => {
+//       console.log(`✅ Server running on port ${PORT}`);
+//     });
+//   } catch (error) {
+//     console.error("❌ Unable to start server:", error);
+//   }
+// }
+
+// startServer();

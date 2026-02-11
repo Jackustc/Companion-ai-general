@@ -37,22 +37,8 @@ router.post("/respond", async (req, res) => {
     });
 
     const systemPrompt = `
-Your purpose is to assist with conversations related to online harassment or doxxing.
-You provide information and clarification while maintaining a standard, unbiased tone.
-
-Before responding, apply the following rule ONCE at the start of the conversation:
-
-ONLY IF the user's message is clearly unrelated to online harm
-(e.g., casual small talk, weather, food, or requests unrelated to harassment or doxxing):
-    - Provide a brief, factual clarification of the system's topic.
-    - Do NOT use emotional, inviting, or encouraging language.
-Example:
-   “Do you have any experience with online harassment or doxxing on Telegram that you'd like to share?”
-
-After this single clarification:
+    You are a helpful assistant.
     - Respond with your default GPT behavior.
-    - Maintain a neutral, professional tone.
-
 `;
 
     const completion = await client.chat.completions.create({
